@@ -19,7 +19,7 @@ export default function (options: PluginOptions = {}) : Plugin {
     let viteConfig: any;
 
     const createWrapper = (tagName: string) => {
-        const attrs = options?.htmlWrapper?.attrs ?? {};
+        const attrs = options.htmlWrapper ? options.htmlWrapper.attrs  : {};
 
         let stringifiedAttrs = '';
 
